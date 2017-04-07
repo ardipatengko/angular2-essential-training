@@ -6,8 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
+  edited = true;
+
   onMediaItemDelete(mediaItem) {
     
+  }
+
+  parentShow(param){
+    this.edited = param;
+  }
+
+  parentClose(param){
+    this.edited = param;
   }
 
   firstMediaItem = {

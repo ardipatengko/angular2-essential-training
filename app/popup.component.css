@@ -1,0 +1,19 @@
+#box{
+  background-color: white;
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  width:  250px;
+  left: 500px;
+  top: 100px;
+  color: black;
+}
+
+#box ul li{
+  list-style: none;
+  padding: 5px;
+}
+
+input{
+  float: right;
+}

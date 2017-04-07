@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { PopupComponent } from './popup.component';
 
 @Component({
   selector: 'mw-media-item',
@@ -7,9 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MediaItemComponent {
   @Input() mediaItem;
-  @Output() delete = new EventEmitter();
+  @Output() preview = new EventEmitter();
 
   onDelete() {
-    this.delete.emit(this.mediaItem);
+    //this.delete.emit(this.mediaItem);
+  }
+
+  onPreview(){
+    this.preview.emit(false);
   }
 }
