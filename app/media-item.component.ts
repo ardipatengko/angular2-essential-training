@@ -1,4 +1,4 @@
-import { Component } from '@angular/common'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'mw-media-item',
