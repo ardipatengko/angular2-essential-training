@@ -16,7 +16,10 @@ export class MediaItemListComponent {
     this.edited = param;
   }
 
-  onMediaItemDelete(mediaItem) { }
+  onMediaItemDelete(mediaItem) {
+    this.mediaItems.slice(this.mediaItems.indexOf(mediaItem));
+    //console.log(this.mediaItems.indexOf(mediaItem));
+   }
 
   mediaItems = [
     {
