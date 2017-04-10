@@ -1,0 +1,42 @@
+<header>
+  <h2>Add Student Profile</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <ul>
+    <li>
+      <label for="studentid">Student Id</label>
+      <input type="text" name="studentid" id="studentid" formControlName="studentid">
+    </li>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+    </li>
+    <li>
+      <label for="medium">Sex</label>
+      <select name="medium" id="medium" formControlName="medium">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </li>
+    
+    <li>
+      <label for="category">Expertise</label>
+      <select name="category" id="category" formControlName="category">
+        <option value="Application Development">Application Development</option>
+        <option value="Data Analyst">Data Analyst</option>
+        <option value="Networking">Networking</option>
+      </select>
+    </li>
+    <li>
+      <label for="year">Graduation Year</label>
+      <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+    </li>
+    <li>
+      <label for="quotes">Student Quotes</label>
+      <input type="text" name="quotes" id="quotes" maxlength="4" formControlName="quotes">
+    </li>
+  </ul>
+  <button type="submit">Save</button>
+</form>

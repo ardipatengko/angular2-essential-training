@@ -46,22 +46,6 @@ export class MediaItemService {
       quotes: "I'm always beautiful.",
       photo: './media/female1.jpg',
       isFavorite: false
-    }, {
-      id: 4,
-      name: "Hoopers",
-      medium: "Female",
-      category: "Drama",
-      year: null,
-      watchedOn: 1288323623006,
-      isFavorite: true
-    }, {
-      id: 5,
-      name: "Happy Joe: Cheery Road",
-      medium: "Female",
-      category: "Action",
-      year: 2015,
-      watchedOn: 1457166565384,
-      isFavorite: false
     }
   ];
 }
