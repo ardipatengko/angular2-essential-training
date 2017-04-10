@@ -1,7 +1,7 @@
 I use : 
 - Pipe date: shortdate, uppercase 
     * media-item.component.html
-- Custom pipe studentIdConvertingList 
+- Custom pipe studentIdConvertingList (to get year from student id. Ex. 672011001, year = 2011)
     * media-item.component.html
     * student-id-converting.pipe.ts
 - Directives 
