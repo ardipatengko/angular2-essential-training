@@ -27,7 +27,7 @@ export class MediaItemService {
       isFavorite: false
     },
     {
-      id: 672011002,
+      id: 672010002,
       name: "Budi Permana",
       medium: "Male",
       category: "Data Analyst",
@@ -37,7 +37,7 @@ export class MediaItemService {
       photo: './media/male2.jpg',
       isFavorite: true
     }, {
-      id: 672011003,
+      id: 672012003,
       name: "Cheery",
       medium: "Female",
       category: "Networking",

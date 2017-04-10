@@ -7,7 +7,10 @@
   <ul>
     <li>
       <label for="studentid">Student Id</label>
-      <input type="text" name="studentid" id="studentid" formControlName="studentid">
+      <input type="text" name="id" id="id" formControlName="id">
+      <div *ngIf="form.controls.id.errors?.id" class="error">
+        Student Id cannot be empty and must be 9 characters
+      </div>
     </li>
     <li>
       <label for="name">Name</label>
@@ -16,17 +19,19 @@
     <li>
       <label for="medium">Sex</label>
       <select name="medium" id="medium" formControlName="medium">
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
+        <!--<option value="Male">Male</option>
+        <option value="Female">Female</option>-->
+        <option *ngFor="let sex of sexList.sex" value="{{ sex }}"> {{ sex }}</option>
       </select>
     </li>
     
     <li>
       <label for="category">Expertise</label>
       <select name="category" id="category" formControlName="category">
-        <option value="Application Development">Application Development</option>
+        <!--<option value="Application Development">Application Development</option>
         <option value="Data Analyst">Data Analyst</option>
-        <option value="Networking">Networking</option>
+        <option value="Networking">Networking</option> -->
+        <option *ngFor="let expertise of expertiseList.expertise" value="{{ expertise }}"> {{ expertise }}</option>
       </select>
     </li>
     <li>
@@ -38,5 +43,5 @@
       <input type="text" name="quotes" id="quotes" maxlength="4" formControlName="quotes">
     </li>
   </ul>
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="!form.valid">Save</button>
 </form>

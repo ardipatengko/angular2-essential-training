@@ -1,10 +1,12 @@
-<h3><strong> {{ mediaItem.name }} </strong></h3>
+<h2> {{ mediaItem.name }} </h2>
+<div>Student Id : {{ mediaItem.id }}</div>
+<div>Generation of : {{ mediaItem.id | studentIdConvertingList }}</div>
 <div> <img class="foto" src="{{ mediaItem.photo }}" /> </div>
 <template [ngIf]="mediaItem.watchedOn">
   <div>Graduated on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </template>
 <div>Sex : {{ mediaItem.medium }}</div>
-<div>{{ mediaItem.category }}</div>
+<div>{{ mediaItem.category | uppercase }}</div>
 <div>{{ mediaItem.year }}</div>
 <div class="tools">
   <!--

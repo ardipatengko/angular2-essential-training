@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, Inject } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { MediaItemService } from './media-item.service';
+import { sexListToken } from './providers';
+import { expertiseListToken } from './providers';
 
 @Component({
   selector: 'mw-media-item-form',
@@ -11,15 +13,20 @@ import { MediaItemService } from './media-item.service';
 export class MediaItemFormComponent {
   form;
 
-  constructor(private mediaItemService : MediaItemService) {}
+  constructor(
+    private mediaItemService : MediaItemService,
+    @Inject(sexListToken) public sexList,
+    @Inject(expertiseListToken) public expertiseList) {}
 
   ngOnInit() {
     this.form = new FormGroup({
-      studentid: new FormControl(''),
+      id: new FormControl('', Validators.compose([
+        this.idValidator//Validators.required,
+      ])),
       medium: new FormControl('Male'),
-      name: new FormControl(''),
+      name: new FormControl('', ),//Validators.required),
       category: new FormControl('Application Development'),
-      year: new FormControl(''),
+      year: new FormControl('', ),//Validators.required),
       quotes: new FormControl('')
     });
   }
@@ -27,5 +34,14 @@ export class MediaItemFormComponent {
   onSubmit(mediaItem) {
     this.mediaItemService.add(mediaItem);
     //console.log(mediaItem);
+  }
+
+  idValidator(control){
+    //console.log((control.value.trim().length != 0) );
+    if(!((control.value.trim().length === 0) || (control.value.trim().length != 9))){
+      return null;
+    }else{
+      return {'id' : true};
+    }
   }
 }

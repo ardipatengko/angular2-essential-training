@@ -9,6 +9,9 @@ import { PopupComponent } from './popup.component';
 import { ImageDirective } from './image.directive'; 
 import { MediaItemService } from './media-item.service';
 import { MediaItemFormComponent } from './media-item-form.component';
+import { sexListToken, sexList } from './providers';
+import { expertiseListToken, expertiseList } from './providers';
+import { StudentIdConvertingListPipe } from './student-id-converting.pipe';
 
 @NgModule({
   imports: [
@@ -21,10 +24,13 @@ import { MediaItemFormComponent } from './media-item-form.component';
     MediaItemListComponent,
     PopupComponent,
     ImageDirective,
-    MediaItemFormComponent
+    MediaItemFormComponent,
+    StudentIdConvertingListPipe
   ],
   providers: [
-    MediaItemService
+    MediaItemService,
+    {provide: sexListToken, useValue: sexList},
+    {provide: expertiseListToken, useValue: expertiseList}
   ],
   bootstrap: [
     AppComponent
