@@ -4,6 +4,8 @@
     *ngFor="let mediaItem of mediaItems"
     [mediaItem]="mediaItem"
     (delete)="onMediaItemDelete($event)"
-     (preview)="parentShow($event)"></mw-media-item>
-    <mw-popup [hidden]="edited"  [mediaItem]="mediaItems[0]" (close)="parentClose($event) "> </mw-popup>
+     (preview)="parentShow($event)">
+     
+     </mw-media-item>
+    <mw-popup [hidden]="edited"  [mediaItem]="mediaItem" (close)="parentClose($event) "> </mw-popup>
 </section>

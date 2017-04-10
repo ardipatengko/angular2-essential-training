@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MediaItemService } from './media-item.service';
+
 
 @Component({
   selector: 'mw-media-item-list',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app/media-item-list.component.css']
 })
 export class MediaItemListComponent {
+  mediaItems;
+  
+  constructor(private mediaItemService: MediaItemService) {}
   edited = true;
 
   parentShow(param){
@@ -16,56 +21,20 @@ export class MediaItemListComponent {
     this.edited = param;
   }
 
+  ngOnInit() {
+    this.mediaItems = this.mediaItemService.get();
+  }
+
+  onMediaItemDelete(mediaItem) {
+    this.mediaItemService.delete(mediaItem);
+  }
+
+  /*
   onMediaItemDelete(mediaItem) {
     this.mediaItems.slice(this.mediaItems.indexOf(mediaItem));
     //console.log(this.mediaItems.indexOf(mediaItem));
    }
+   */
 
-  mediaItems = [
-    {
-      id: 672011001,
-      name: "Ardi Pratama Patengko",
-      medium: "Male", //sex from mediumn : Series
-      category: "Application Development", //konsentrasi
-      year: 2014, //graduation year
-      watchedOn: 1294166565384,
-      quotes: "Always do your best. Never give up.",
-      isFavorite: false
-    },
-    {
-      id: 672011002,
-      name: "Budi Novianto",
-      medium: "Male",
-      category: "Data Analyst",
-      year: 2015,
-      watchedOn: null,
-      quotes: "Lazy is my friend.",
-      isFavorite: true
-    }, {
-      id: 672011003,
-      name: "Cheery",
-      medium: "Female",
-      category: "Networking",
-      year: 2016,
-      watchedOn: null,
-      quotes: "I'm always beautiful.",
-      isFavorite: false
-    }, {
-      id: 4,
-      name: "Hoopers",
-      medium: "Female",
-      category: "Drama",
-      year: null,
-      watchedOn: null,
-      isFavorite: true
-    }, {
-      id: 5,
-      name: "Happy Joe: Cheery Road",
-      medium: "Female",
-      category: "Action",
-      year: 2015,
-      watchedOn: 1457166565384,
-      isFavorite: false
-    }
-  ];
+  
 }

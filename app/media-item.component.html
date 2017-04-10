@@ -1,7 +1,9 @@
-<h2>{{ mediaItem.name }}</h2>
+<h3><strong> {{ mediaItem.name }} </strong></h3>
+<div> <img class="foto" src="{{ mediaItem.photo }}" /> </div>
 <template [ngIf]="mediaItem.watchedOn">
-  <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
+  <div>Graduated on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </template>
+<div>Sex : {{ mediaItem.medium }}</div>
 <div>{{ mediaItem.category }}</div>
 <div>{{ mediaItem.year }}</div>
 <div class="tools">
