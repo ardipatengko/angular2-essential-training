@@ -24,7 +24,7 @@ export class MediaItemFormComponent {
         this.idValidator//Validators.required,
       ])),
       medium: new FormControl('Male'),
-      name: new FormControl('', ),//Validators.required),
+      name: new FormControl('', this.nameValidator),//Validators.required,
       category: new FormControl('Application Development'),
       year: new FormControl('', ),//Validators.required),
       quotes: new FormControl('')
@@ -42,6 +42,14 @@ export class MediaItemFormComponent {
       return null;
     }else{
       return {'id' : true};
+    }
+  }
+
+  nameValidator(control){
+    if(!((control.value.trim().length === 0))){
+      return null;
+    }else{
+      return {'name' : true};
     }
   }
 }
