@@ -1,6 +1,6 @@
 <section>
   <mw-media-item
-    [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}" 
+    [ngClass]="{'medium-movies': mediaItem.medium==='Male', 'medium-series':mediaItem.medium==='Female'}" 
     *ngFor="let mediaItem of mediaItems"
     [mediaItem]="mediaItem"
     (delete)="onMediaItemDelete($event)"

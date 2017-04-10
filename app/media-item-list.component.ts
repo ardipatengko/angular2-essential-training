@@ -20,34 +20,37 @@ export class MediaItemListComponent {
 
   mediaItems = [
     {
-      id: 1,
-      name: "Firebug",
-      medium: "Series",
-      category: "Science Fiction",
-      year: 2010,
+      id: 672011001,
+      name: "Ardi Pratama Patengko",
+      medium: "Male", //sex from mediumn : Series
+      category: "Application Development", //konsentrasi
+      year: 2014, //graduation year
       watchedOn: 1294166565384,
+      quotes: "Always do your best. Never give up.",
       isFavorite: false
     },
     {
-      id: 2,
-      name: "The Small Tall",
-      medium: "Movies",
-      category: "Comedy",
+      id: 672011002,
+      name: "Budi Novianto",
+      medium: "Male",
+      category: "Data Analyst",
       year: 2015,
       watchedOn: null,
+      quotes: "Lazy is my friend.",
       isFavorite: true
     }, {
-      id: 3,
-      name: "The Redemption",
-      medium: "Movies",
-      category: "Action",
+      id: 672011003,
+      name: "Cheery",
+      medium: "Female",
+      category: "Networking",
       year: 2016,
       watchedOn: null,
+      quotes: "I'm always beautiful.",
       isFavorite: false
     }, {
       id: 4,
       name: "Hoopers",
-      medium: "Series",
+      medium: "Female",
       category: "Drama",
       year: null,
       watchedOn: null,
@@ -55,7 +58,7 @@ export class MediaItemListComponent {
     }, {
       id: 5,
       name: "Happy Joe: Cheery Road",
-      medium: "Movies",
+      medium: "Female",
       category: "Action",
       year: 2015,
       watchedOn: 1457166565384,

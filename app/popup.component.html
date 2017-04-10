@@ -1,15 +1,20 @@
 <div id="box" >
   <input type="button" value="x" (click)="onClosePopup()"/>
   <ul>
+    <!--
     <li>Name : {{ mediaItem.name }} </li>
     <li>Watch on : {{ mediaItem.watchedOn  | date: "shortDate"}} </li>
     <li>Category : {{ mediaItem.category }} </li>
     <li>Medium : {{ mediaItem.medium }} </li>
     <li>Year :  {{ mediaItem.year }} </li>
+    -->
+    <li> <i> {{ mediaItem.quotes }} </i> </li>
     <input type="button" (click) = "prev()" value="<"/>
+    <!--
     <li *ngFor="let image of images">
        <img [mwImage]="false" *ngIf="image.id===position" src="{{ image.path }}" class="imgSmall"/> 
       </li>
       <input type="button" (click)="next()" value=">"/> 
+      -->
   </ul>
 </div>
