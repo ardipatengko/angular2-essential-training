@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
@@ -12,11 +13,13 @@ import { MediaItemFormComponent } from './media-item-form.component';
 import { sexListToken, sexList } from './providers';
 import { expertiseListToken, expertiseList } from './providers';
 import { StudentIdConvertingListPipe } from './student-id-converting.pipe';
+import { routing } from './app.routing';
 
 @NgModule({
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   declarations: [
     AppComponent,
@@ -30,7 +33,8 @@ import { StudentIdConvertingListPipe } from './student-id-converting.pipe';
   providers: [
     MediaItemService,
     {provide: sexListToken, useValue: sexList},
-    {provide: expertiseListToken, useValue: expertiseList}
+    {provide: expertiseListToken, useValue: expertiseList},
+    { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [
     AppComponent
