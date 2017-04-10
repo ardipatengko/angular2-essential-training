@@ -1,7 +1,7 @@
 <h2> {{ mediaItem.name }} </h2>
 <div>Student Id : {{ mediaItem.id }}</div>
 <div>Generation of : {{ mediaItem.id | studentIdConvertingList }}</div>
-<div> <img class="foto" src="{{ mediaItem.photo }}" /> </div>
+<div> <img [mwImage]="false" class="foto" src="{{ mediaItem.photo }}" /> </div>
 <template [ngIf]="mediaItem.watchedOn">
   <div>Graduated on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </template>

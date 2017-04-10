@@ -5,7 +5,7 @@ import { Directive, HostBinding, HostListener, Input} from '@angular/core';
 })
 
 export class ImageDirective{
-  @HostBinding('class.imgSmall-hovering') hovering = false;
+  @HostBinding('class.foto-hovering') hovering = false;
 
   @HostListener('mouseenter')  onmouseenter(){
     this.hovering = true;
