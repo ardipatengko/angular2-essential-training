@@ -1,4 +1,4 @@
-I use : 
+In this project, I use : 
 - Pipe date: shortdate, uppercase 
     * media-item.component.html
 - Custom pipe studentIdConvertingList (to get year from student id. Ex. 672011001, year = 2011)
@@ -22,3 +22,7 @@ I use :
     * media-item-form.component.ts
 - Injection
     * media-item-form.component.ts
+- Routers
+    * app.routing.ts
+    * media-item-form.component.html
+    * media-item-form.component.html
