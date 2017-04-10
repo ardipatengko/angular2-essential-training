@@ -1,0 +1,24 @@
+I use : 
+- Pipe date: shortdate, uppercase 
+    * media-item.component.html
+- Custom pipe studentIdConvertingList 
+    * media-item.component.html
+    * student-id-converting.pipe.ts
+- Directives 
+    * media-item.component.html
+    * image.directive.ts
+- Component
+    * app.component.ts
+    * media-item-form.component.ts
+    * media-item-list.component.ts
+    * media-item.component.ts
+    * popup.component.ts
+- Services
+    * media-item.service.ts
+- Providers
+    * providers.ts
+- Forms
+    * media-item-form.component.html
+    * media-item-form.component.ts
+- Injection
+    * media-item-form.component.ts

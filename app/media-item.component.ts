@@ -15,6 +15,6 @@ export class MediaItemComponent {
   }
 
   onPreview(){
-    this.preview.emit(false);
+    this.preview.emit([false, this.mediaItem]);
   }
 }

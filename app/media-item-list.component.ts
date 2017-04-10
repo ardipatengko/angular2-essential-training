@@ -9,12 +9,14 @@ import { MediaItemService } from './media-item.service';
 })
 export class MediaItemListComponent {
   mediaItems;
+  mediaItemGet;
   
   constructor(private mediaItemService: MediaItemService) {}
   edited = true;
 
   parentShow(param){
-    this.edited = param;
+    this.edited = param[0];
+    this.mediaItemGet = param[1];
   }
 
   parentClose(param){
